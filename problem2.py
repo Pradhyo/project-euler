@@ -7,3 +7,15 @@ two terms. By starting with 1 and 2, the first 10 terms will be:
 
 By considering the terms in the Fibonacci sequence whose values do not exceed 
 four million, find the sum of the even-valued terms.'''
+
+current = 2
+previous = 1
+total = 2
+
+while current < 4000000:
+	current , previous = current + previous, current
+	if current % 2 == 0:
+		total += current
+
+print total
+
