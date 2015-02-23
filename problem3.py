@@ -11,3 +11,17 @@ def is_prime(number):
 		if number % i == 0:
 			return False
 	return True
+
+def largest_prime(number):
+	largest = None
+	i = 2
+	while number > 1:
+		if number % i == 0 and is_prime(i):
+			largest = i
+			while number % i == 0:
+				number /= i
+		i+=1
+	return largest
+
+print largest_prime(number)
+
