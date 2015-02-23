@@ -4,3 +4,5 @@
 
 def is_palindrome(number):
 	return str(number) == str(number)[::-1]
+
+print max(i * j for i in range(1000) for j in range(1000) if is_palindrome(i*j))
