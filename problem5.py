@@ -13,6 +13,8 @@ def factor(number):
 		while number % i == 0:
 			factors[i] = factors.get(i,0) + 1
 			number /= i
+	if number != 1:
+		factors[number] = 1
 	return factors
 
 def productoffactors(factors):
@@ -21,6 +23,15 @@ def productoffactors(factors):
 	for factor in factors:
 		number *= factor ** factors[factor]
 	return number
+
+for i in range(number,number/2,-1):
+	factors = factor(i)
+	for each in factors:
+		if factors[each] > factorsofanswer.get(each,0):
+			factorsofanswer[each] = factors[each]
+
+print productoffactors(factorsofanswer)
+
 
 
 
