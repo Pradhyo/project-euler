@@ -15,6 +15,12 @@ def factor(number):
 			number /= i
 	return factors
 
+def productoffactors(factors):
+	"""Given factors and powers as dictionary, return the number """
+	number = 1
+	for factor in factors:
+		number *= factor ** factors[factor]
+	return number
 
 
 
