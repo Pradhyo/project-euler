@@ -9,3 +9,13 @@ def is_prime(number):
 		if number % i == 0:
 			return False
 	return True
+
+count = 0
+i = 1
+number = 10001
+while count<number:
+	i += 1
+	if is_prime(i) == True:
+		count += 1
+
+print i
