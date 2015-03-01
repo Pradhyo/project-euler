@@ -16,6 +16,7 @@ def product(number):
 		product *= int(each)
 	return product
 
-print product('12341234')
-print product('123412340')
-print product('1234')
+for i in range(len(number)-1,12,-1):
+	maximum = max(product(number[i-13:i]) , maximum)
+
+print maximum
