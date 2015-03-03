@@ -9,3 +9,11 @@ def is_prime(number):
 		if number % i == 0:
 			return False
 	return True
+
+answer = 0
+
+for i in range(2000000):
+	if is_prime(i):
+		answer += i
+
+print answer
