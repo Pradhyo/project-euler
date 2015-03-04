@@ -3,10 +3,14 @@
 '''What is the 10 001st prime number?'''
 
 def is_prime(number):
-	if number == 0 or number == 1:
+	if number in [0,1]:
 		return None
-	for i in range(2,int(number**0.5)+1):
-		if number % i == 0:
+	if number in [2,3]:
+		return True
+	if number % 2 == 0 or number % 3 == 0:
+		return False
+	for i in range(5,int(number**0.5)+1,6):
+		if number % i == 0 or number % (i+2) == 0:
 			return False
 	return True
 
