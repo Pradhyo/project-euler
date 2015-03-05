@@ -20,6 +20,13 @@ def factor(number):
 		factors[number] = 1
 	return factors
 
+def number_of_divisors(number):
+	"""return number of factors of number"""
+	total_factors = 1
+	prime_factors = factor(number)
+	for current_factor in prime_factors:
+		total_factors *= prime_factors[current_factor] + 1
+	return total_factors
 
 min_divisors = 50
 current = 0
