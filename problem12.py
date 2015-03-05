@@ -28,20 +28,14 @@ def number_of_divisors(number):
 		total_factors *= prime_factors[current_factor] + 1
 	return total_factors
 
-min_divisors = 50
+min_divisors = 150
 current = 0
-
-
 
 while True:
 	current += 1
 	current_triangle_number = triangle_number(current)
-	divisors_count = 0	
-	for i in range(1,current_triangle_number + 1):
-		if current_triangle_number % i == 0:
-			divisors_count += 1
-		if divisors_count >= min_divisors:
-			print current_triangle_number
-			break
+	divisors_count = number_of_divisors(current_triangle_number)
 	if divisors_count >= min_divisors:
 		break
+
+print current_triangle_number
